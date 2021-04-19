@@ -1,0 +1,37 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Introduction
+{% endblock %}
+
+{% block content %}
+    <div class="card my-3">
+        <div class="card-body">
+            <div class="my-3">
+                Hi, you are participating in a hypothetical dictator game. To thank you for participating
+                in our study, you will be
+                given {{ Constants.endowment }} as a reward.
+            </div>
+
+            <div class="my-3">
+                In the next section, you will be presented with information about a non-profit organization. You can
+                decide whether
+                you want to allocate and donate part of the {{ Constants.endowment }}. You get to keep whatever is left
+                after the donation. In
+                the amount
+                you would like to donate, you can enter any number from 0 to {{ Constants.endowment }} inclusive. After
+                you make a donation the
+                game will
+                end.
+            </div>
+        </div>
+    </div>
+
+
+
+
+    {% formfields %}
+    {% next_button %}
+
+{% endblock %}

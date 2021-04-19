@@ -1,0 +1,19 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Survey
+{% endblock %}
+
+{% block content %}
+    <div class="card my-3">
+        <div class="card-body">
+            Please fill out this survey to finish the experiment: <a
+                target="_blank"
+                href="{{ player.get_link_to_survey }}">link to survey</a>
+        </div>
+    </div>
+
+    {% next_button %}
+
+{% endblock %}

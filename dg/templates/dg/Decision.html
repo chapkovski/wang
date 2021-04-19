@@ -1,12 +1,13 @@
-MyPage.html{% extends "global/Page.html" %}
+{% extends "global/Page.html" %}
 {% load otree static %}
 
 {% block title %}
-    Page title
+    Decision
 {% endblock %}
 
 {% block content %}
-
+    {% include 'dg/includes/text.html' %}
+{% formfields %}
     {% next_button %}
 
 {% endblock %}

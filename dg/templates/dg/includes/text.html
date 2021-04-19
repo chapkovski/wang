@@ -1,0 +1,30 @@
+{% load otree  %}
+<div class="card">
+    <div class="card-body">
+        {% if session.config.high %}
+            Non-profit Y is recognized as a top-rated charity in the US. It has been endorsed by many in the industry of
+            how efficiently they use their funds and approved by well-known nonprofit evaluation sites like
+            givewell.org. In 2020, 85% of their total operating expenses supported programs for children and youth. They
+            developed a thorough system of checks and balances to ensure funds are spent in accordance with plans.
+            Independent audits of every agency are conducted to ensure transparency. The team from the headquarters of
+            the organization regularly and frequently performs detailed reviews of facilities and operations. They also
+            visit sponsored children and conduct interviews to ensure they are receiving the benefits and services
+            promised to donors and sponsors. In all donation cases, bills and contact information are provided to
+            donors, and donors can contact the hospital or other supporting parties to verify the authenticity of the
+            fundraising program.
+        {% else %}
+            Non-profit X is a relatively new charity in the US. Most of their work is to help children and youth in
+            need. Their charity is currently not listed as a registered organization on the government website. However,
+            the team said it’s in the process of being registered on the website. They are seen as a very genuine
+            organization.  We do not currently have data on what percent of their operating expenses are spent on
+            supporting children.
+        {% endif %}
+
+    </div>
+    {% if session.config.image %}
+        <div class="text-center">
+            <img src="{% static 'img/ngo.jpeg' %}" alt="" width="400px" height="auto">
+        </div>
+    {% endif %}
+
+</div>
