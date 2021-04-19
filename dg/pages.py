@@ -12,9 +12,16 @@ class Decision(Page):
     form_fields = ['decision']
     form_model = 'player'
 
+class Survey(Page):
+    form_fields = [
+        'gender',
+        'age',
+        'donation_history',
+        'children',
+        'working'
 
-class SurveyLink(Page):
-    pass
+    ]
+    form_model = 'player'
 class Last(Page):
     pass
 
@@ -22,7 +29,7 @@ class Last(Page):
 page_sequence = [
     Intro,
     Decision,
-    SurveyLink,
+    Survey,
     Last,
 
 ]

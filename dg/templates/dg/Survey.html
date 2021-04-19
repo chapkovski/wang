@@ -1,0 +1,12 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    To finish the experiment, please fill out questions in the post experiment survey:
+{% endblock %}
+
+{% block content %}
+    {% formfields %}
+    {% next_button %}
+
+{% endblock %}

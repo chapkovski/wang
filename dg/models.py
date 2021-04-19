@@ -45,3 +45,12 @@ class Player(BasePlayer):
     decision = models.CurrencyField(min=0, max=Constants.endowment,
                                     label=f'Please enter the amount you would like to donate to the non-profit'
                                           f' organization you just read about (from 0 to {Constants.endowment}) ')
+    gender = models.StringField(label='What is your gender?',
+                                choices=['female', 'male', 'gender diverse'],
+                                widget=widgets.RadioSelect)
+
+    age = models.IntegerField(label='How old are you?', min=0, max=100)
+    donation_history = models.BooleanField(
+        label='Have you donated to a children support organization in the past 6 months?')
+    children = models.BooleanField(label='Do you have children?')
+    working = models.BooleanField(label='Are you working in a field helping children')
